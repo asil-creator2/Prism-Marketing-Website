@@ -1,8 +1,6 @@
 
-const LandingPage = () => {
-  return (
-    <div>LandingPage</div>
-  )
-}
+import HeroSection from "../components/landingPage/Hero/HeroSection";
+
+const LandingPage = () => <HeroSection />;
 
 export default LandingPage

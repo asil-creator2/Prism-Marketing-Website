@@ -1,0 +1,145 @@
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+:root {
+  color-scheme: dark;
+
+  /* Brand */
+  --prism-primary: #8B83FF;
+  --prism-primary-200: #D6DCFE;
+  --prism-primary-hover: #A29BFF;
+  --prism-secondary: #B46CFF;
+  --prism-accent: #FF70D9;
+  --prism-hero-title-start: #F8F8FF;
+  --prism-hero-title-end: #F87BBE;
+  --prism-hero-cta-start: #8083FF;
+  --prism-hero-cta-middle: #C3C4E9;
+  --prism-hero-cta-end: #C0C1FF;
+  --prism-primary-950: #121348;
+  --prism-stat-card-tint: rgb(156 170 253 / 20%);
+  --prism-stat-icon-bg: rgb(99 102 241 / 30%);
+  --prism-progression-bg: rgb(0 3 19 / 90%);
+  --prism-progression-border: rgb(128 131 255 / 20%);
+  --prism-progression-active: #7F8DFC;
+  --prism-progression-muted: rgb(38 42 53 / 80%);
+  --prism-progression-current-text: #121348;
+  --prism-progression-muted-text: #E1E0FF;
+  --prism-progression-third-text: #DFE2F1;
+  --prism-progression-final-bg: #C2D7C4;
+  --prism-progression-final-text: #002800;
+  --prism-progression-dot-current: #353944;
+  --prism-progression-dot-third: #C0C1FF;
+  --prism-progression-dot-final: #003C00;
+  --prism-progression-arrow: #908FA0;
+
+  /* Backgrounds */
+  --prism-background: #000313;
+  --prism-surface: #0E0D25;
+  --prism-surface-raised: #191E3A;
+  --prism-card: #0E0D25;
+
+  /* Text */
+  --prism-foreground: #F2F4FF;
+  --prism-muted: #9996B2;
+  --prism-inverse: #000313;
+
+  /* Borders and focus */
+  --prism-border: #292950;
+  --prism-ring: #8B83FF;
+
+  /* Status */
+  --prism-info: #36D9FF;
+  --prism-success: #44E5A0;
+  --prism-warning: #FFB547;
+  --prism-danger: #FF6B91;
+
+  /* Effects */
+  --prism-glass: rgb(41 41 80 / 45%);
+  --prism-radius-card: 1rem;
+}
+
+@theme inline {
+  --color-primary: var(--prism-primary);
+  --color-primary-200: var(--prism-primary-200);
+  --color-primary-950: var(--prism-primary-950);
+  --color-stat-card: var(--prism-stat-card-tint);
+  --color-stat-icon: var(--prism-stat-icon-bg);
+  --color-progression-bg: var(--prism-progression-bg);
+  --color-progression-border: var(--prism-progression-border);
+  --color-progression-active: var(--prism-progression-active);
+  --color-progression-muted: var(--prism-progression-muted);
+  --color-progression-final: var(--prism-progression-final-bg);
+  --color-primary-hover: var(--prism-primary-hover);
+  --color-secondary: var(--prism-secondary);
+  --color-accent: var(--prism-accent);
+
+  --color-background: var(--prism-background);
+  --color-surface: var(--prism-surface);
+  --color-surface-raised: var(--prism-surface-raised);
+  --color-card: var(--prism-card);
+
+  --color-foreground: var(--prism-foreground);
+  --color-muted: var(--prism-muted);
+  --color-inverse: var(--prism-inverse);
+
+  --color-border: var(--prism-border);
+  --color-ring: var(--prism-ring);
+
+  --color-info: var(--prism-info);
+  --color-success: var(--prism-success);
+  --color-warning: var(--prism-warning);
+  --color-danger: var(--prism-danger);
+
+  --radius-card: var(--prism-radius-card);
+}
+
+@theme inline {
+  --font-m-plus-1: "M PLUS 1", sans-serif;
+  --font-jetbrains-mono: "JetBrains Mono", monospace;
+}
+
+
+
+/* Navbar */
+:root {
+  --prism-nav-pill: #030617;
+  --prism-nav-active: #F0F0FF;
+  --prism-nav-active-text: #353A9C;
+  --prism-nav-glow: rgb(109 99 232 / 12%);
+
+}
+
+.prism-navbar {
+  background-color: color-mix(in srgb, var(--prism-background) 20%, transparent);
+  background-image: linear-gradient(rgb(0 0 0 / 20%), rgb(0 0 0 / 20%));
+  backdrop-filter: blur(12px);
+}
+
+/* Light theme */
+:root.light {
+  color-scheme: light;
+
+  --prism-background: #F7F7FF;
+  --prism-surface: #FFFFFF;
+  --prism-surface-raised: #EEEEFA;
+  --prism-card: #FFFFFF;
+
+  --prism-foreground: #17152F;
+  --prism-muted: #66627F;
+  --prism-inverse: #FFFFFF;
+
+  --prism-border: #DCD9EF;
+  --prism-ring: #6D63E8;
+
+  --prism-glass: rgb(220 217 239 / 65%);
+
+  --prism-nav-pill: #EEEEFA;
+  --prism-nav-active: #E8E9FF;
+  --prism-nav-active-text: #353A9C;
+  --prism-nav-glow: rgb(83 105 255 / 10%);
+
+}
+

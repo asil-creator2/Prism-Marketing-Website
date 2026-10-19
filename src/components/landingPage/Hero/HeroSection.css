@@ -1,0 +1,395 @@
+@reference "../../../index.css";
+
+.hero-section {
+  @apply relative isolate overflow-hidden px-6 pt-[152px] pb-8 text-foreground;
+  background:
+    radial-gradient(ellipse at 52% 13%, color-mix(in srgb, var(--prism-primary) 34%, transparent), transparent 46%),
+    radial-gradient(ellipse at 0% 55%, color-mix(in srgb, var(--prism-secondary) 18%, transparent), transparent 44%),
+    radial-gradient(ellipse at 100% 60%, color-mix(in srgb, var(--prism-primary) 14%, transparent), transparent 34%),
+    var(--prism-background);
+}
+
+.hero-circuit {
+  @apply absolute inset-0 -z-[1] overflow-hidden pointer-events-none;
+}
+
+.hero-circuit span {
+  @apply absolute h-[120px] w-[42%] rounded-tr-3xl border-r border-t;
+  border-top: 1px solid color-mix(in srgb, var(--prism-primary) 20%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--prism-primary) 20%, transparent);
+  box-shadow: 0 -1px 10px color-mix(in srgb, var(--prism-secondary) 12%, transparent);
+}
+
+.hero-circuit span:nth-child(1) {
+  @apply top-[8%] left-[-4%];
+}
+
+.hero-circuit span:nth-child(2) {
+  @apply top-[36%] right-[-8%];
+  transform: rotate(180deg);
+}
+
+.hero-circuit span:nth-child(3) {
+  @apply bottom-[20%] left-[8%];
+  transform: rotate(180deg);
+}
+
+.hero-circuit span:nth-child(4) {
+  @apply right-[4%] bottom-[8%];
+}
+
+.hero-content {
+  @apply flex w-full max-w-[1280px] flex-col items-center gap-20;
+  margin-right: auto;
+  margin-left: max(0px, calc((100vw - 1280px) / 2 - 24px));
+}
+
+.hero-main {
+  @apply flex w-full max-w-[752px] min-h-[547px] flex-col items-center gap-[60px];
+}
+
+.hero-intro,
+.hero-copy {
+  @apply flex w-full flex-col items-center;
+}
+
+.hero-intro {
+  @apply gap-10;
+}
+
+.hero-copy {
+  @apply gap-6;
+}
+
+.hero-title {
+  @apply m-0 text-center font-m-plus-1 text-[72px] font-extrabold leading-[80px] text-foreground;
+  width: min(906px, calc(100vw - 48px));
+  text-wrap: balance;
+  -webkit-text-stroke: 2px #000000;
+  paint-order: stroke fill;
+}
+
+.hero-title > span {
+  @apply block whitespace-nowrap;
+}
+
+.hero-title-accent {
+  background: linear-gradient(90deg, var(--prism-hero-title-start), var(--prism-hero-title-end));
+  -webkit-text-fill-color: transparent;
+  @apply bg-clip-text text-transparent;
+
+}
+
+.hero-description {
+  @apply m-0 flex min-h-[88px] w-full max-w-[740px] items-center justify-center text-center font-m-plus-1 text-2xl font-normal leading-[29.25px] text-primary-200;
+  width: min(740px, 100%);
+  text-wrap: pretty;
+}
+
+.hero-progression {
+  @apply box-border flex h-[42px] w-full max-w-[751.82px] items-center gap-2 rounded-2xl border p-1.5 bg-progression-bg list-none;
+  border-color: var(--prism-progression-border);
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 10%), 0 8px 10px -6px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(12px);
+}
+
+.hero-progression-item {
+  @apply flex shrink-0 items-center gap-2;
+}
+
+.hero-progression-step {
+  @apply box-border flex h-7 shrink-0 items-center gap-2 rounded-xl px-4 py-1.5;
+}
+
+.hero-progression-item:nth-child(1) .hero-progression-step {
+  width: 170.41px;
+}
+
+.hero-progression-item:nth-child(2) .hero-progression-step {
+  width: 170.41px;
+}
+
+.hero-progression-item:nth-child(3) .hero-progression-step {
+  width: 163.2px;
+}
+
+.hero-progression-item:nth-child(4) .hero-progression-step {
+  width: 171px;
+}
+
+.hero-progression-item.is-current .hero-progression-step {
+  @apply bg-progression-active;
+  box-shadow: 0 0 12px rgb(128 131 255 / 40%);
+}
+
+.hero-progression-item.is-muted .hero-progression-step {
+  @apply bg-progression-muted;
+}
+
+.hero-progression-item.is-final .hero-progression-step {
+  @apply bg-progression-final;
+}
+
+.hero-progression-dot {
+  @apply h-2 w-2 shrink-0 rounded-full;
+}
+
+.hero-progression-item.is-current .hero-progression-dot {
+  background-color: var(--prism-progression-dot-current);
+}
+
+.hero-progression-item.is-second .hero-progression-dot {
+  background-color: var(--prism-progression-muted-text);
+}
+
+.hero-progression-item.is-third .hero-progression-dot {
+  background-color: var(--prism-progression-dot-third);
+}
+
+.hero-progression-item.is-final .hero-progression-dot {
+  background-color: var(--prism-progression-dot-final);
+}
+
+.hero-progression-label {
+  @apply truncate whitespace-nowrap font-jetbrains-mono text-xs font-bold leading-4;
+}
+
+.hero-progression-item.is-current .hero-progression-label {
+  color: var(--prism-progression-current-text);
+}
+
+.hero-progression-item.is-second .hero-progression-label {
+  color: var(--prism-progression-muted-text);
+}
+
+.hero-progression-item.is-third .hero-progression-label {
+  color: var(--prism-progression-third-text);
+}
+
+.hero-progression-item.is-final .hero-progression-label {
+  color: var(--prism-progression-final-text);
+}
+
+.hero-progression-arrow {
+  @apply shrink-0;
+  width: 4.93px;
+  height: 8px;
+  color: var(--prism-progression-arrow);
+}
+
+@media (max-width: 800px) {
+  .hero-progression {
+    @apply h-auto flex-col items-stretch gap-1.5 p-2;
+  }
+
+  .hero-progression-item {
+    @apply w-full flex-col gap-1.5;
+  }
+
+  .hero-progression-item:nth-child(n) .hero-progression-step {
+    @apply h-8 w-full justify-start px-3 py-1.5;
+  }
+
+  .hero-progression-arrow {
+    @apply rotate-90 self-center;
+  }
+}
+
+.hero-actions-group {
+  @apply flex w-full flex-col items-center gap-6;
+}
+
+.hero-actions {
+  @apply grid w-full max-w-[714px] grid-cols-2 gap-8;
+}
+
+.hero-action {
+  @apply box-border flex min-h-[69px] items-center justify-center gap-2 rounded-xl border px-6 py-4 text-center font-m-plus-1 font-bold no-underline transition-[transform,box-shadow] duration-150;
+  border-color: color-mix(in srgb, var(--prism-border) 70%, transparent);
+  box-shadow: 0 0 28px rgb(0 0 0 / 30%);
+}
+
+.hero-action:hover {
+  @apply -translate-y-0.5;
+  box-shadow: 0 8px 28px rgb(0 0 0 / 30%);
+}
+
+.hero-action:focus-visible {
+  @apply outline-3 outline-offset-3 outline-ring;
+}
+
+.hero-action-primary {
+  background: linear-gradient(
+    90deg,
+    var(--prism-hero-cta-start) 0%,
+    var(--prism-hero-cta-middle) 50%,
+    var(--prism-hero-cta-end) 100%
+  );
+  @apply text-2xl leading-none text-primary-950;
+}
+
+.hero-action-secondary {
+  background: color-mix(in srgb, var(--prism-background) 90%, transparent);
+  @apply text-xl font-medium leading-6 text-foreground;
+}
+
+.hero-benefits {
+  @apply m-0 flex list-none items-center justify-center gap-3 p-0;
+}
+
+.hero-benefit {
+  @apply box-border flex min-h-10 items-center justify-center gap-2 rounded-[20px_5px] border p-2 font-m-plus-1 text-[13px] leading-5 whitespace-nowrap;
+  border-color: color-mix(in srgb, var(--prism-primary) 50%, transparent);
+  background: color-mix(in srgb, var(--prism-surface-raised) 20%, transparent);
+  @apply text-foreground;
+}
+
+.hero-statistics {
+  @apply m-0 grid w-full grid-cols-[279px_279px_279px_275px] gap-14 list-none p-0;
+}
+
+.hero-statistic {
+  @apply box-border flex h-[214px] min-w-0 flex-col items-center justify-center gap-4 rounded-[20px] border-0 border-b-4 p-4 text-center;
+  border-bottom-color: var(--prism-stat-card-tint);
+  background: var(--prism-stat-card-tint);
+}
+
+.hero-statistic-icon {
+  @apply grid h-[58px] w-[58px] flex-none place-items-center gap-[10px] rounded-[10px] bg-stat-icon p-1 text-white;
+}
+
+.hero-statistic-copy {
+  @apply flex w-[150px] flex-col items-center;
+}
+
+.hero-statistic-value {
+  @apply m-0 h-[50px] w-[150px] font-m-plus-1 text-4xl font-semibold leading-[50px] text-white;
+}
+
+.hero-statistic-label {
+  @apply h-16 w-[150px] whitespace-nowrap font-m-plus-1 text-2xl font-medium leading-[64px] text-white;
+}
+
+@media (max-width: 1280px) {
+  .hero-statistics {
+    @apply grid-cols-4 gap-6;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-statistics {
+    @apply gap-6;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    @apply pt-36;
+  }
+
+  .hero-title {
+    @apply text-[56px] leading-16;
+  }
+
+  .hero-description {
+    @apply text-xl leading-7;
+  }
+
+  .hero-intro {
+    @apply gap-8;
+  }
+
+  .hero-statistic {
+    @apply h-[214px];
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    @apply px-5 pt-32 pb-7;
+  }
+
+  .hero-content {
+    @apply gap-14;
+  }
+
+  .hero-main {
+    @apply gap-10;
+  }
+
+  .hero-intro {
+    @apply gap-7;
+  }
+
+  .hero-copy {
+    @apply gap-[18px];
+  }
+
+  .hero-title {
+    @apply text-[40px] leading-[48px];
+  }
+
+  .hero-title > span {
+    @apply whitespace-normal;
+  }
+
+  .hero-description {
+    @apply text-base leading-6;
+  }
+
+  .hero-actions {
+    @apply grid-cols-1 gap-3;
+  }
+
+  .hero-action-primary {
+    @apply text-xl;
+  }
+
+  .hero-action-secondary {
+    @apply text-lg;
+  }
+
+  .hero-benefits {
+    @apply flex-wrap gap-2;
+  }
+
+  .hero-benefit {
+    @apply text-xs;
+  }
+
+  .hero-statistics {
+    @apply grid-cols-2 gap-3;
+  }
+
+  .hero-statistic {
+    @apply h-[214px] gap-4 rounded-2xl p-3;
+  }
+
+  .hero-statistic-icon {
+    @apply h-[58px] w-[58px];
+  }
+
+  .hero-statistic-value {
+    @apply text-4xl leading-[50px];
+  }
+
+  .hero-statistic-label {
+    @apply text-2xl leading-[64px];
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    @apply text-4xl leading-[44px];
+  }
+
+  .hero-statistics {
+    @apply grid-cols-1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-action {
+    @apply transition-none;
+  }
+}
