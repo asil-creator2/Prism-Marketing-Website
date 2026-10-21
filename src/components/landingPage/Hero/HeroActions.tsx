@@ -1,29 +1,32 @@
-import { CodeXml, GraduationCap, UsersRound, Webcam } from "lucide-react";
+import { CodeXml, GraduationCap, MapPin, UsersRound } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const benefits = [
-  { label: "Curated for Ages 10–18", Icon: GraduationCap },
-  { label: "Global Youth Community", Icon: UsersRound },
+  { labelKey: "hero.benefits.ages", Icon: GraduationCap },
+  { labelKey: "hero.benefits.community", Icon: UsersRound },
 ];
 
 export default function HeroActions() {
+  const { t } = useTranslation();
+
   return (
     <div className="hero-actions-group">
       <div className="hero-actions">
         <Link className="hero-action hero-action-primary" to="/#about">
-          <span>Start Learning</span>
+          <span>{t("hero.actions.startLearning")}</span>
           <CodeXml aria-hidden="true" size={32} strokeWidth={1.8} />
         </Link>
         <Link className="hero-action hero-action-secondary" to="/#projects">
-          <Webcam  aria-hidden="true" size={20} strokeWidth={2} />
-          <span>Explore Challenges</span>
+          <MapPin aria-hidden="true" size={20} strokeWidth={2} />
+          <span>{t("hero.actions.exploreChallenges")}</span>
         </Link>
       </div>
-      <ul className="hero-benefits" aria-label="Program highlights">
-        {benefits.map(({ label, Icon }) => (
-          <li className="hero-benefit" key={label}>
+      <ul className="hero-benefits" aria-label={t("hero.benefitsLabel")}>
+        {benefits.map(({ labelKey, Icon }) => (
+          <li className="hero-benefit" key={labelKey}>
             <Icon aria-hidden="true" size={18} strokeWidth={1.8} />
-            <span>{label}</span>
+            <span>{t(labelKey)}</span>
           </li>
         ))}
       </ul>

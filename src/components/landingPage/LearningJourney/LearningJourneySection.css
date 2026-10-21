@@ -1,0 +1,236 @@
+@reference "../../../index.css";
+
+.learning-journey {
+  @apply relative isolate overflow-hidden bg-background px-6 py-14 text-foreground;
+  min-height: 1682px;
+}
+
+.learning-journey::before,
+.learning-journey::after {
+  @apply pointer-events-none absolute inset-0 -z-[1];
+  content: "";
+}
+
+.learning-journey::before {
+  opacity: 0.2;
+  background-image: url("../../../assets/images/LearningJourny.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+
+.learning-journey::after {
+  background: linear-gradient(rgb(0 3 19 / 28%), rgb(0 3 19 / 28%));
+}
+
+.learning-journey-content {
+  @apply relative z-10 mx-auto w-full max-w-[1280px];
+}
+
+.learning-journey-heading {
+  @apply mx-auto flex w-full max-w-[797px] flex-col items-center gap-2 text-center;
+}
+
+.learning-journey-title {
+  @apply m-0 w-full font-m-plus-1 text-5xl font-bold leading-[1.4];
+  background: linear-gradient(
+    90deg,
+    var(--prism-journey-title-start),
+    var(--prism-journey-title-middle),
+    var(--prism-journey-title-end)
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.learning-journey-description {
+  @apply m-0 w-full font-m-plus-1 text-xl font-normal leading-7 text-primary-50;
+}
+
+.journey-timeline {
+  @apply relative mx-auto mt-12 grid h-[1360px] w-full max-w-[1280px] grid-rows-4 list-none p-0;
+}
+
+.journey-timeline::before {
+  @apply absolute inset-y-0 left-1/2 w-0.5 -translate-x-1/2;
+  background: linear-gradient(
+    to bottom,
+    var(--prism-info),
+    var(--prism-primary),
+    var(--prism-accent),
+    var(--prism-success)
+  );
+  box-shadow: 0 0 18px color-mix(in srgb, var(--prism-primary) 60%, transparent);
+  content: "";
+}
+
+.journey-item {
+  @apply relative grid min-h-0 grid-cols-[minmax(0,1fr)_64px_minmax(0,1fr)] items-center;
+}
+
+.journey-card {
+  @apply box-border flex h-[252px] w-full max-w-[512px] flex-col justify-between rounded-2xl border p-6 backdrop-blur-2xl;
+  background: var(--prism-journey-card-bg);
+  border-color: var(--prism-journey-card-border);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 37%);
+}
+
+.journey-item:nth-child(odd) .journey-card {
+  @apply col-start-1 justify-self-end pr-12;
+}
+
+.journey-item:nth-child(even) .journey-card {
+  @apply col-start-3 justify-self-start pl-12;
+}
+
+.journey-node {
+  @apply z-10 col-start-2 row-start-1 grid h-12 w-12 justify-self-center place-items-center rounded-full border bg-background font-jetbrains-mono text-xs font-bold;
+  box-shadow: 0 0 16px color-mix(in srgb, currentColor 50%, transparent);
+}
+
+.journey-node-cyan,
+.journey-card-cyan {
+  --journey-accent: var(--prism-info);
+}
+
+.journey-node-violet,
+.journey-card-violet {
+  --journey-accent: var(--prism-primary);
+}
+
+.journey-node-pink,
+.journey-card-pink {
+  --journey-accent: var(--prism-accent);
+}
+
+.journey-node-green,
+.journey-card-green {
+  --journey-accent: var(--prism-success);
+}
+
+.journey-node {
+  border-color: var(--journey-accent);
+  color: var(--journey-accent);
+}
+
+.journey-card-topline {
+  @apply flex items-center justify-between gap-3;
+}
+
+.journey-category,
+.journey-level {
+  @apply inline-flex min-h-5 items-center rounded-full px-2 font-jetbrains-mono text-[9px] font-medium uppercase leading-none;
+  background: color-mix(in srgb, var(--journey-accent) 20%, transparent);
+  color: var(--journey-accent);
+}
+
+.journey-level {
+  background: color-mix(in srgb, var(--journey-accent) 14%, transparent);
+}
+
+.journey-card-heading {
+  @apply flex items-center justify-between gap-3;
+}
+
+.journey-card-heading h3 {
+  @apply m-0 font-m-plus-1 text-xl font-semibold leading-7 text-foreground;
+}
+
+.journey-card-icon {
+  @apply grid h-8 w-8 flex-none place-items-center rounded border;
+  border-color: color-mix(in srgb, var(--journey-accent) 55%, transparent);
+  color: var(--journey-accent);
+}
+
+.journey-card-description {
+  @apply m-0 font-m-plus-1 text-sm font-normal leading-5 text-muted;
+}
+
+.journey-milestone {
+  @apply flex min-h-8 items-center gap-2 rounded-lg border px-3 py-2 font-jetbrains-mono text-[10px] leading-4;
+  background: color-mix(in srgb, var(--journey-accent) 12%, transparent);
+  border-color: color-mix(in srgb, var(--journey-accent) 32%, transparent);
+  color: var(--journey-accent);
+}
+
+.journey-milestone p {
+  @apply m-0;
+}
+
+.journey-milestone p span {
+  @apply font-bold;
+}
+
+@media (max-width: 900px) {
+  .learning-journey {
+    @apply min-h-0 px-5 py-12;
+  }
+
+  .learning-journey-title {
+    @apply text-[40px] leading-[1.4];
+  }
+
+  .learning-journey-description {
+    @apply text-base leading-6;
+  }
+
+  .journey-timeline {
+    @apply mt-10 h-auto grid-cols-[40px_minmax(0,1fr)] grid-rows-none gap-y-6;
+  }
+
+  .journey-timeline::before {
+    @apply left-5 translate-x-0;
+  }
+
+  .journey-item {
+    @apply grid-cols-[40px_minmax(0,1fr)];
+    grid-column: 1 / -1;
+  }
+
+  .journey-card,
+  .journey-item:nth-child(odd) .journey-card,
+  .journey-item:nth-child(even) .journey-card {
+    @apply col-start-2 row-start-1 h-auto min-h-[252px] max-w-none justify-self-stretch px-5 py-6;
+  }
+
+  .journey-item:nth-child(odd) .journey-card,
+  .journey-item:nth-child(even) .journey-card {
+    grid-column: 2;
+  }
+
+  .journey-node {
+    @apply col-start-1;
+  }
+}
+
+@media (max-width: 520px) {
+  .learning-journey {
+    @apply px-4;
+  }
+
+  .journey-timeline {
+    @apply grid-cols-[32px_minmax(0,1fr)];
+  }
+
+  .journey-timeline::before {
+    @apply left-4;
+  }
+
+  .journey-item {
+    @apply grid-cols-[32px_minmax(0,1fr)];
+  }
+
+  .journey-node {
+    @apply h-8 w-8 text-[10px];
+  }
+
+  .journey-card-topline {
+    @apply flex-wrap items-start;
+  }
+
+  .journey-category,
+  .journey-level {
+    @apply text-[8px];
+  }
+}

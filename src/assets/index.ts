@@ -1,4 +1,4 @@
-import prismLogo from "./prism-logo.webp";
+import prismLogo from "./images/prism-logo.webp";
 
 
 export {

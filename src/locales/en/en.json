@@ -1,0 +1,147 @@
+{
+	"navbar": {
+		"brandLabel": "PS Prism home",
+		"logoAlt": "Prism logo",
+		"openNavigation": "Open navigation",
+		"closeNavigation": "Close navigation",
+		"appearance": "Appearance",
+		"lightTheme": "Light theme",
+		"darkTheme": "Dark theme",
+		"links": {
+			"home": "Home",
+			"about": "About",
+			"projects": "Projects",
+			"leaderboard": "Leaderboard",
+			"events": "Events"
+		},
+		"theme": {
+			"light": "Light",
+			"dark": "Dark"
+		}
+	},
+	"hero": {
+		"titleLineOne": "Competitive Programming",
+		"titleLineTwoPrefix": "For",
+		"titleAccent": "Young Minds",
+		"description": "Empowering school students and future pioneers through gamified code arenas, verified algorithmic pathways, interactive problem visualizers, and real-time Grandmaster mentorship.",
+		"progressionLabel": "Learning progression",
+		"progression": {
+			"learn": "01. Learn to Code",
+			"think": "02. Think Smarter",
+			"solve": "03. Solve Better",
+			"compete": "04. Compete & Win"
+		},
+		"actions": {
+			"startLearning": "Start Learning",
+			"exploreChallenges": "Explore Challenges"
+		},
+		"benefitsLabel": "Program highlights",
+		"benefits": {
+			"ages": "Curated for Ages 10–18",
+			"community": "Global Youth Community"
+		},
+		"statisticsLabel": "Program statistics",
+		"statistics": {
+			"youngCoders": "Young Coders",
+			"challenges": "Challenges",
+			"events": "Events",
+			"mentors": "Mentors"
+		}
+	},
+	"learningJourney": {
+		"title": "Learning Journey",
+		"description": "A guided journey from programming fundamentals to competitive problem-solving.",
+		"stepsLabel": "Learning journey steps",
+		"milestoneLabel": "Milestone",
+		"steps": {
+			"foundation": {
+				"category": "Fundamentals & Logic",
+				"level": "Level 1 · Novice",
+				"title": "01 — Foundation",
+				"description": "Learn the fundamentals of programming, logical thinking, and basic problem-solving.",
+				"milestone": "Solve your first problems independently."
+			},
+			"algorithms": {
+				"category": "Efficiency & Data Structures",
+				"level": "Level 2 · Builder",
+				"title": "02 — Algorithms",
+				"description": "Explore data structures, algorithms, and efficient problem-solving techniques.",
+				"milestone": "Build more efficient solutions."
+			},
+			"practice": {
+				"category": "Timed Contests & Arenas",
+				"level": "Level 3 · Competitor",
+				"title": "03 — Practice",
+				"description": "Solve problems, practice under time limits, and learn from virtual contests.",
+				"milestone": "Apply your skills under time pressure."
+			},
+			"contestReady": {
+				"category": "Competitive Strategy",
+				"level": "Level 4 · Prodigy",
+				"title": "04 — Contest Ready",
+				"description": "Prepare for suitable competitions and develop stronger contest strategies.",
+				"milestone": "Be ready to take on your next contest."
+			}
+		}
+	},
+	"studentVoices": {
+		"title": "Our Students’ Voices",
+		"description": "Read what young competitors, their parents, and tournament awardees say about the Ps-Prism journey.",
+		"reviewsLabel": "Student and parent reviews",
+		"rating": "5 out of 5 stars",
+		"reviews": {
+			"liam": {
+				"name": "Liam",
+				"detail": "Age 14 · Bronze Div",
+				"quote": "The live visualizer made recursion and trees finally click for me! I used to get stuck on edge cases, but now I can clearly trace every single branch."
+			},
+			"sarah": {
+				"name": "Sarah",
+				"detail": "Parent of Year 8 Student",
+				"quote": "My daughter went from absolute beginner to placing in her first state coding contest in under 6 months. The community support here is extraordinary."
+			},
+			"ethan": {
+				"name": "Ethan",
+				"detail": "Age 16 · Gold Div",
+				"quote": "The weekend speed-coding battles are intense and teach real problem-solving under pressure. My time complexity instincts got so much sharper!"
+			},
+			"priya": {
+				"name": "Priya",
+				"detail": "Age 15 · Silver Div",
+				"quote": "Having mentors break down solutions step-by-step changed how I approach math and code. I never feel embarrassed asking why an approach didn’t work."
+			}
+		}
+	},
+	"footer": {
+		"brand": "Ps - Prism",
+		"description": "A dedicated youth coding initiative fostering computational intuition, mathematical proofs, and collaborative competitive coding for primary, middle, and high school learners.",
+		"nonProfit": "Registered Non-Profit Youth Org",
+		"programsLabel": "Programs",
+		"programs": {
+			"bronze": "Bronze Algorithm Starters",
+			"silver": "Silver Division Sprint",
+			"usaco": "USACO Advanced Bootcamp",
+			"math": "Math & Graph Theory Labs"
+		},
+		"communityLabel": "Community",
+		"community": {
+			"weekend": "Weekend Hub Locations",
+			"safety": "Youth Safety Guidelines",
+			"parents": "Parent Information Guide",
+			"mentors": "Mentor Application"
+		},
+		"newsletterTitle": "Weekly Problem Set",
+		"newsletterDescription": "Stay updated with weekly problem challenges, editorials, and competition announcements.",
+		"emailLabel": "Student or parent email",
+		"emailPlaceholder": "Enter student/parent email",
+		"subscribe": "Subscribe",
+		"comingSoon": "Email sign-ups will be available soon.",
+		"legalLabel": "Legal information",
+		"legal": {
+			"privacy": "Privacy Policy",
+			"safety": "Child Safety Protocols",
+			"terms": "Terms of Arena Use"
+		},
+		"copyright": "© {{year}} Ps-Prism Competitive Programming Club. All rights reserved."
+	}
+}

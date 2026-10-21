@@ -1,0 +1,147 @@
+@reference "../../../index.css";
+
+.student-voices {
+  @apply relative isolate overflow-hidden bg-background px-6 py-16 text-foreground;
+}
+
+.student-voices::before {
+  @apply pointer-events-none absolute inset-0 -z-[1];
+  background-image: url("../../../assets/images/StudentsVoices.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  opacity: 0.1;
+}
+
+.student-voices-content {
+  @apply relative z-10 mx-auto w-full max-w-[1280px];
+}
+
+.student-voices-heading {
+  @apply mx-auto flex w-full max-w-[994px] flex-col items-center gap-2 text-center;
+}
+
+.student-voices-title {
+  @apply m-0 w-full font-m-plus-1 text-5xl font-bold leading-[53px];
+  background: linear-gradient(
+    90deg,
+    var(--prism-journey-title-start),
+    var(--prism-journey-title-middle),
+    var(--prism-journey-title-end)
+  );
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.04em;
+  -webkit-text-fill-color: transparent;
+}
+
+.student-voices-description {
+  @apply m-0 w-full font-m-plus-1 text-base font-normal leading-6;
+  color: var(--prism-muted);
+}
+
+.student-voices-list {
+  @apply mx-auto mt-12 grid w-full list-none grid-cols-4 gap-4 p-0;
+}
+
+.student-voices-item {
+  @apply min-w-0 pt-3;
+}
+
+.student-review {
+  @apply relative box-border flex flex-col gap-3 rounded-2xl border p-5;
+  background: #000313;
+  border-color: rgb(129 140 248 / 18%);
+  box-shadow: 0 4px 0 rgb(190 167 104 / 25%), 0 12px 18px rgb(0 0 0 / 28%);
+}
+
+.student-review-pin {
+  @apply pointer-events-none absolute -top-3 right-4 h-8 w-8;
+  color: #f4f4ff;
+  transform: rotate(45deg);
+}
+
+.student-review-rating {
+  @apply flex h-4 items-center gap-0.5 text-warning;
+}
+
+.student-review-quote {
+  @apply m-0 font-m-plus-1 text-xs font-normal leading-[19px] text-primary-200;
+}
+
+.student-review-footer {
+  @apply flex items-center gap-3 border-t border-white/10 pt-3;
+}
+
+.student-review-avatar {
+  @apply grid h-9 w-9 flex-none place-items-center rounded-full border font-m-plus-1 text-xs font-medium text-white;
+  background: color-mix(in srgb, var(--review-accent) 34%, #000313);
+  border-color: color-mix(in srgb, var(--review-accent) 55%, transparent);
+}
+
+.student-review-identity {
+  @apply min-w-0;
+}
+
+.student-review-identity h3 {
+  @apply m-0 font-m-plus-1 text-xs font-medium leading-5;
+  color: #f2f4ff;
+}
+
+.student-review-identity p {
+  @apply m-0 font-m-plus-1 text-[10px] leading-4;
+  color: color-mix(in srgb, var(--review-accent) 75%, white);
+}
+
+.student-review-violet {
+  --review-accent: #818cf8;
+}
+
+.student-review-pink {
+  --review-accent: #f472b6;
+}
+
+.student-review-cyan {
+  --review-accent: #22d3ee;
+}
+
+.student-review-purple {
+  --review-accent: #a78bfa;
+}
+
+@media (max-width: 1024px) {
+  .student-voices-list {
+    @apply grid-cols-2;
+  }
+}
+
+@media (max-width: 640px) {
+  .student-voices {
+    @apply px-4 py-12;
+  }
+
+  .student-voices-title {
+    @apply text-[40px] leading-[48px];
+  }
+
+  .student-voices-description {
+    @apply text-sm leading-6;
+  }
+
+  .student-voices-list {
+    @apply mt-10 grid-cols-1 gap-5;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .student-voices *,
+  .student-voices *::before,
+  .student-voices *::after {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+}

@@ -2,40 +2,11 @@
 
 .hero-section {
   @apply relative isolate overflow-hidden px-6 pt-[152px] pb-8 text-foreground;
-  background:
-    radial-gradient(ellipse at 52% 13%, color-mix(in srgb, var(--prism-primary) 34%, transparent), transparent 46%),
-    radial-gradient(ellipse at 0% 55%, color-mix(in srgb, var(--prism-secondary) 18%, transparent), transparent 44%),
-    radial-gradient(ellipse at 100% 60%, color-mix(in srgb, var(--prism-primary) 14%, transparent), transparent 34%),
-    var(--prism-background);
-}
-
-.hero-circuit {
-  @apply absolute inset-0 -z-[1] overflow-hidden pointer-events-none;
-}
-
-.hero-circuit span {
-  @apply absolute h-[120px] w-[42%] rounded-tr-3xl border-r border-t;
-  border-top: 1px solid color-mix(in srgb, var(--prism-primary) 20%, transparent);
-  border-right: 1px solid color-mix(in srgb, var(--prism-primary) 20%, transparent);
-  box-shadow: 0 -1px 10px color-mix(in srgb, var(--prism-secondary) 12%, transparent);
-}
-
-.hero-circuit span:nth-child(1) {
-  @apply top-[8%] left-[-4%];
-}
-
-.hero-circuit span:nth-child(2) {
-  @apply top-[36%] right-[-8%];
-  transform: rotate(180deg);
-}
-
-.hero-circuit span:nth-child(3) {
-  @apply bottom-[20%] left-[8%];
-  transform: rotate(180deg);
-}
-
-.hero-circuit span:nth-child(4) {
-  @apply right-[4%] bottom-[8%];
+  background-color: var(--prism-background);
+  background-image:
+    linear-gradient(rgb(0 3 19 / 10%), rgb(0 3 19 / 10%)),
+    url("../../../assets/images/HeroBg.png");
+  @apply bg-cover bg-center bg-no-repeat;
 }
 
 .hero-content {

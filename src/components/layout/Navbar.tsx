@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Home,
   LayoutGrid,
@@ -16,21 +17,23 @@ import { Link } from "react-router-dom";
 import { prismLogo } from "../../assets";
 
 interface NavItem {
-  label: string;
+  id: string;
+  labelKey: string;
   path: string;
   Icon: LucideIcon;
 }
 
 const navItems: NavItem[] = [
-  { label: "Home", path: "#home", Icon: Home },
-  { label: "About", path: "#about", Icon: LayoutGrid },
-  { label: "Projects", path: "#projects", Icon: ArrowLeftRight },
-  { label: "Leaderboard", path: "#leaderboard", Icon: ChartNoAxesColumn },
-  { label: "Events", path: "#events", Icon: CalendarClock },
+  { id: "home", labelKey: "navbar.links.home", path: "#home", Icon: Home },
+  { id: "about", labelKey: "navbar.links.about", path: "#about", Icon: LayoutGrid },
+  { id: "projects", labelKey: "navbar.links.projects", path: "#projects", Icon: ArrowLeftRight },
+  { id: "leaderboard", labelKey: "navbar.links.leaderboard", path: "#leaderboard", Icon: ChartNoAxesColumn },
+  { id: "events", labelKey: "navbar.links.events", path: "#events", Icon: CalendarClock },
 ];
 
 export default function Navbar() {
-  const [active, setActive] = useState("Home");
+  const { t } = useTranslation();
+  const [active, setActive] = useState("home");
   const [isDark, setIsDark] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -41,10 +44,10 @@ export default function Navbar() {
     root.classList.toggle("light", !isDark);
   }, [isDark]);
 
-  const navLinkClass = (label: string) =>
+  const navLinkClass = (id: string) =>
     `flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-2
     text-sm font-medium transition-colors lg:px-3.5 ${
-      active === label
+      active === id
         ? "bg-[var(--prism-nav-active)] text-[var(--prism-nav-active-text)]"
         : "text-muted hover:bg-surface-raised hover:text-foreground"
   }`;
@@ -66,12 +69,12 @@ export default function Navbar() {
             setActive("Home");
             setMenuOpen(false);
           }}
-          aria-label="Ps Prism home"
+            aria-label={t("navbar.brandLabel")}
           className="flex shrink-0 items-center gap-3"
         >
           <img
             src={prismLogo}
-            alt="Prism logo"
+            alt={t("navbar.logoAlt")}
             className="h-9 w-9 object-contain"
           />
           <span className="whitespace-nowrap text-base font-m-plus-1 tracking-wide sm:text-lg">
@@ -81,16 +84,16 @@ export default function Navbar() {
 
         {/* Desktop navigation */}
         <div className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-border bg-(--prism-nav-pill) p-1.5 lg:flex">
-          {navItems.map(({ label, path, Icon }) => (
+          {navItems.map(({ id, labelKey, path, Icon }) => (
             <Link
-              key={label}
+              key={id}
               to={path}
-              onClick={() => setActive(label)}
-              aria-current={active === label ? "page" : undefined}
-              className={navLinkClass(label)}
+              onClick={() => setActive(id)}
+              aria-current={active === id ? "page" : undefined}
+              className={navLinkClass(id)}
             >
               <Icon size={14} strokeWidth={2.3} />
-              {label}
+              {t(labelKey)}
             </Link>
           ))}
         </div>
@@ -107,7 +110,7 @@ export default function Navbar() {
                 : "text-muted hover:text-foreground"
             }`}
           >
-            Light
+            {t("navbar.theme.light")}
           </button>
 
           <button
@@ -120,7 +123,7 @@ export default function Navbar() {
                 : "text-muted hover:text-foreground"
             }`}
           >
-            Dark
+            {t("navbar.theme.dark")}
           </button>
         </div>
 
@@ -128,7 +131,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setMenuOpen((open) => !open)}
-          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+          aria-label={t(menuOpen ? "navbar.closeNavigation" : "navbar.openNavigation")}
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           className="rounded-lg p-2 text-foreground transition-colors hover:bg-surface-raised lg:hidden"
@@ -143,35 +146,35 @@ export default function Navbar() {
             className="absolute left-0 right-0 top-full mt-2 rounded-xl border border-border bg-surface p-3 text-foreground shadow-xl lg:hidden"
           >
             <div className="flex flex-col gap-1">
-              {navItems.map(({ label, path, Icon }) => (
+              {navItems.map(({ id, labelKey, path, Icon }) => (
                 <Link
-                  key={label}
+                  key={id}
                   to={path}
                   onClick={() => {
-                    setActive(label);
+                    setActive(id);
                     setMenuOpen(false);
                   }}
                   className={`flex items-center gap-3 rounded-lg px-4 py-3 text-sm transition-colors ${
-                    active === label
+                    active === id
                       ? "bg-(--prism-nav-active) text-(--prism-nav-active-text)"
                       : "text-muted hover:bg-surface-raised hover:text-foreground"
                   }`}
                 >
                   <Icon size={17} />
-                  {label}
+                  {t(labelKey)}
                 </Link>
               ))}
             </div>
 
             {/* Mobile theme switcher */}
             <div className="mt-3 flex items-center justify-between border-t border-border pt-3">
-              <span className="text-sm text-muted">Appearance</span>
+              <span className="text-sm text-muted">{t("navbar.appearance")}</span>
 
               <div className="flex gap-1">
                 <button
                   type="button"
                   onClick={() => setIsDark(false)}
-                  aria-label="Light theme"
+                  aria-label={t("navbar.lightTheme")}
                   aria-pressed={!isDark}
                   className={`rounded-md p-2 ${
                     !isDark
@@ -185,7 +188,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   onClick={() => setIsDark(true)}
-                  aria-label="Dark theme"
+                  aria-label={t("navbar.darkTheme")}
                   aria-pressed={isDark}
                   className={`rounded-md p-2 ${
                     isDark

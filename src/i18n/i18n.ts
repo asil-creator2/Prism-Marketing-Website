@@ -77,4 +77,6 @@ i18n.on("languageChanged", (language) => {
   }
 });
 
+updateDocumentDirection(i18n.resolvedLanguage ?? i18n.language);
+
 export default i18n;

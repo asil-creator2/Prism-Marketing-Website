@@ -19,6 +19,22 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+@font-face {
+  font-family: "Nimbus Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./assets/fonts/nimbus-sans-regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Nimbus Mono PS";
+  font-style: normal;
+  font-weight: 600 700;
+  font-display: swap;
+  src: url("./assets/fonts/nimbus-mono-ps-bold.otf") format("opentype");
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 
@@ -27,6 +43,7 @@
 
   /* Brand */
   --prism-primary: #8B83FF;
+  --prism-primary-50: #F3F4FF;
   --prism-primary-200: #D6DCFE;
   --prism-primary-hover: #A29BFF;
   --prism-secondary: #B46CFF;
@@ -39,6 +56,11 @@
   --prism-primary-950: #121348;
   --prism-stat-card-tint: rgb(156 170 253 / 20%);
   --prism-stat-icon-bg: rgb(99 102 241 / 30%);
+  --prism-journey-title-start: #FFFFFF;
+  --prism-journey-title-middle: #7F8DFC;
+  --prism-journey-title-end: #F472B6;
+  --prism-journey-card-bg: rgb(22 18 43 / 55%);
+  --prism-journey-card-border: rgb(255 255 255 / 7%);
   --prism-progression-bg: rgb(0 3 19 / 90%);
   --prism-progression-border: rgb(128 131 255 / 20%);
   --prism-progression-active: #7F8DFC;
@@ -81,10 +103,12 @@
 
 @theme inline {
   --color-primary: var(--prism-primary);
+  --color-primary-50: var(--prism-primary-50);
   --color-primary-200: var(--prism-primary-200);
   --color-primary-950: var(--prism-primary-950);
   --color-stat-card: var(--prism-stat-card-tint);
   --color-stat-icon: var(--prism-stat-icon-bg);
+  --color-journey-card: var(--prism-journey-card-bg);
   --color-progression-bg: var(--prism-progression-bg);
   --color-progression-border: var(--prism-progression-border);
   --color-progression-active: var(--prism-progression-active);
@@ -117,6 +141,8 @@
 @theme inline {
   --font-m-plus-1: "M PLUS 1", sans-serif;
   --font-jetbrains-mono: "JetBrains Mono", monospace;
+  --font-nimbus-sans: "Nimbus Sans", sans-serif;
+  --font-nimbus-mono-ps: "Nimbus Mono PS", monospace;
 }
 
 
@@ -160,4 +186,3 @@
   --prism-nav-glow: rgb(83 105 255 / 10%);
 
 }
-
