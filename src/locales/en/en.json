@@ -91,26 +91,27 @@
 		"rating": "5 out of 5 stars",
 		"reviews": {
 			"liam": {
-				"name": "Liam",
-				"detail": "Age 14 · Bronze Div",
-				"quote": "The live visualizer made recursion and trees finally click for me! I used to get stuck on edge cases, but now I can clearly trace every single branch."
+				"name": "Liam"
 			},
 			"sarah": {
-				"name": "Sarah",
-				"detail": "Parent of Year 8 Student",
-				"quote": "My daughter went from absolute beginner to placing in her first state coding contest in under 6 months. The community support here is extraordinary."
+				"name": "Sarah"
 			},
 			"ethan": {
-				"name": "Ethan",
-				"detail": "Age 16 · Gold Div",
-				"quote": "The weekend speed-coding battles are intense and teach real problem-solving under pressure. My time complexity instincts got so much sharper!"
+				"name": "Ethan"
 			},
 			"priya": {
-				"name": "Priya",
-				"detail": "Age 15 · Silver Div",
-				"quote": "Having mentors break down solutions step-by-step changed how I approach math and code. I never feel embarrassed asking why an approach didn’t work."
+				"name": "Priya"
 			}
 		}
+	},
+	"partners": {
+		"titlePrefix": "Our",
+		"titleAccent": "Partners",
+		"description": "We’re grateful to the partners who help young minds learn, compete, and thrive.",
+		"viewWebsite": "View Website",
+		"supportTitle": "Your company could be here",
+		"supportDescription": "Help students aged 9–18 learn, compete, and grow. Support our community and get featured on this page.",
+		"becomeSupporter": "Become a Supporter"
 	},
 	"footer": {
 		"brand": "Ps - Prism",

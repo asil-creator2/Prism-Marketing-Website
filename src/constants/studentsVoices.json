@@ -1,0 +1,30 @@
+[
+  {
+    "key": "liam",
+    "initial": "L",
+    "tone": "violet",
+    "detail": "Age 14 · Bronze Div",
+    "quote": "The live visualizer made recursion and trees finally click for me! I used to get stuck on edge cases, but now I can clearly trace every single branch."
+  },
+  {
+    "key": "sarah",
+    "initial": "S",
+    "tone": "pink",
+    "detail": "Parent of Year 8 Student",
+    "quote": "My daughter went from absolute beginner to placing in her first state coding contest in under 6 months. The community support here is extraordinary."
+  },
+  {
+    "key": "ethan",
+    "initial": "E",
+    "tone": "cyan",
+    "detail": "Age 16 · Gold Div",
+    "quote": "The weekend speed-coding battles are intense and teach real problem-solving under pressure. My time complexity instincts got so much sharper!"
+  },
+  {
+    "key": "priya",
+    "initial": "P",
+    "tone": "purple",
+    "detail": "Age 15 · Silver Div",
+    "quote": "Having mentors break down solutions step-by-step changed how I approach math and code. I never feel embarrassed asking why an approach didn’t work."
+  }
+]

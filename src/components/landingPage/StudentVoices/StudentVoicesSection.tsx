@@ -1,13 +1,7 @@
 import { Pin, Star } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import reviews from "../../../constants/studentsVoices.json";
 import "./StudentVoicesSection.css";
-
-const reviews = [
-  { key: "liam", initial: "L", tone: "violet" },
-  { key: "sarah", initial: "S", tone: "pink" },
-  { key: "ethan", initial: "E", tone: "cyan" },
-  { key: "priya", initial: "P", tone: "purple" },
-];
 
 export default function StudentVoicesSection() {
   const { t } = useTranslation();
@@ -32,7 +26,7 @@ export default function StudentVoicesSection() {
           className="student-voices-list"
           aria-label={t("studentVoices.reviewsLabel")}
         >
-          {reviews.map(({ key, initial, tone }) => (
+          {reviews.map(({ key, initial, tone, detail, quote }) => (
             <li className="student-voices-item" key={key}>
               <article
                 className={`student-review student-review-${tone}`}
@@ -57,7 +51,7 @@ export default function StudentVoicesSection() {
                 </span>
 
                 <blockquote className="student-review-quote">
-                  {t(`studentVoices.reviews.${key}.quote`)}
+                  {quote}
                 </blockquote>
 
                 <footer className="student-review-footer">
@@ -68,7 +62,7 @@ export default function StudentVoicesSection() {
                     <h3 id={`student-review-${key}-name`}>
                       {t(`studentVoices.reviews.${key}.name`)}
                     </h3>
-                    <p>{t(`studentVoices.reviews.${key}.detail`)}</p>
+                    <p>{detail}</p>
                   </div>
                 </footer>
               </article>

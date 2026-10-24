@@ -186,3 +186,8 @@
   --prism-nav-glow: rgb(83 105 255 / 10%);
 
 }
+
+
+button{
+  @apply cursor-pointer;
+}

@@ -5,7 +5,7 @@
   background-color: var(--prism-background);
   background-image:
     linear-gradient(rgb(0 3 19 / 10%), rgb(0 3 19 / 10%)),
-    url("../../../assets/images/HeroBg.png");
+    url("../../../assets/images/HeroBg.webp");
   @apply bg-cover bg-center bg-no-repeat;
 }
 

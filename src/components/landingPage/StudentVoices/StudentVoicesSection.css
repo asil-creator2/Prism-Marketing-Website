@@ -6,7 +6,7 @@
 
 .student-voices::before {
   @apply pointer-events-none absolute inset-0 -z-[1];
-  background-image: url("../../../assets/images/StudentsVoices.jpg");
+  background-image: url("../../../assets/images/StudentsVoices.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
