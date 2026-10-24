@@ -112,6 +112,41 @@
   opacity: 0.75;
 }
 
+:root.light .our-partners::before {
+  opacity: 0.045;
+}
+
+:root.light .partner-card {
+  background: linear-gradient(135deg, #FFFFFF, #F0EFFB);
+  border-color: #777DE8;
+  box-shadow: 0 12px 28px rgb(40 37 74 / 9%);
+}
+
+:root.light .partner-card h3,
+:root.light .partner-support-card h3,
+:root.light .partner-card-description,
+:root.light .partner-support-card p {
+  color: #28254A;
+}
+
+:root.light .partner-card-logo {
+  border-color: #B8B4D1;
+}
+
+:root.light .partner-card-website {
+  color: #514DAD;
+}
+
+:root.light .partner-support-card {
+  border-color: #777DE8;
+  background: rgb(255 255 255 / 76%);
+}
+
+:root.light .partner-support-button {
+  color: #FFFFFF;
+  box-shadow: 2px 2px 4px rgb(40 37 74 / 18%);
+}
+
 @media (max-width: 800px) {
   .our-partners {
     @apply px-5 py-20;

@@ -234,11 +234,21 @@
 }
 
 .hero-statistic-value {
-  @apply m-0 h-[50px] w-[150px] font-m-plus-1 text-4xl font-semibold leading-[50px] text-white;
+  @apply m-0 h-[50px] w-[150px] font-m-plus-1 text-4xl font-semibold leading-[50px] text-foreground;
 }
 
 .hero-statistic-label {
-  @apply h-16 w-[150px] whitespace-nowrap font-m-plus-1 text-2xl font-medium leading-[64px] text-white;
+  @apply h-16 w-[150px] whitespace-nowrap font-m-plus-1 text-2xl font-medium leading-[64px] text-foreground;
+}
+
+:root.light .hero-section {
+  background-image:
+    linear-gradient(rgb(247 247 255 / 78%), rgb(247 247 255 / 78%)),
+    url("../../../assets/images/HeroBg.webp");
+}
+
+:root.light .hero-title {
+  -webkit-text-stroke-color: transparent;
 }
 
 @media (max-width: 1280px) {

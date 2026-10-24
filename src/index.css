@@ -162,6 +162,11 @@
   backdrop-filter: blur(12px);
 }
 
+:root.light .prism-navbar {
+  background-color: rgb(247 247 255 / 82%);
+  background-image: linear-gradient(rgb(255 255 255 / 62%), rgb(255 255 255 / 62%));
+}
+
 /* Light theme */
 :root.light {
   color-scheme: light;
@@ -174,6 +179,34 @@
   --prism-foreground: #17152F;
   --prism-muted: #66627F;
   --prism-inverse: #FFFFFF;
+  --prism-primary-50: #49465F;
+  --prism-primary-200: #514D70;
+  --prism-primary-hover: #5D59C8;
+  --prism-hero-title-start: #28254A;
+  --prism-hero-title-end: #A92F7A;
+  --prism-hero-cta-start: #777DE8;
+  --prism-hero-cta-middle: #E6C7DF;
+  --prism-hero-cta-end: #B6BCFF;
+  --prism-stat-card-tint: rgb(109 99 232 / 12%);
+  --prism-stat-icon-bg: rgb(99 102 241 / 85%);
+  --prism-journey-title-start: #28254A;
+  --prism-journey-title-middle: #5965D5;
+  --prism-journey-title-end: #B83D8A;
+  --prism-journey-card-bg: rgb(255 255 255 / 88%);
+  --prism-journey-card-border: rgb(109 99 232 / 22%);
+  --prism-progression-bg: rgb(255 255 255 / 94%);
+  --prism-progression-border: rgb(109 99 232 / 28%);
+  --prism-progression-active: #777DE8;
+  --prism-progression-muted: #EEEFF8;
+  --prism-progression-current-text: #FFFFFF;
+  --prism-progression-muted-text: #514D70;
+  --prism-progression-third-text: #514D70;
+  --prism-progression-final-bg: #D8EFDF;
+  --prism-progression-final-text: #15532B;
+  --prism-progression-dot-current: #FFFFFF;
+  --prism-progression-dot-third: #777DE8;
+  --prism-progression-dot-final: #15532B;
+  --prism-progression-arrow: #77738B;
 
   --prism-border: #DCD9EF;
   --prism-ring: #6D63E8;
@@ -184,7 +217,10 @@
   --prism-nav-active: #E8E9FF;
   --prism-nav-active-text: #353A9C;
   --prism-nav-glow: rgb(83 105 255 / 10%);
-
+  --prism-info: #087F9F;
+  --prism-success: #17834E;
+  --prism-warning: #9A5A00;
+  --prism-danger: #C4365C;
 }
 
 

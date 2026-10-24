@@ -162,6 +162,37 @@
   @apply font-bold;
 }
 
+:root.light .learning-journey::before {
+  opacity: 0;
+}
+
+:root.light .learning-journey::after {
+  background:
+    radial-gradient(ellipse at 14% 18%, rgb(119 125 232 / 10%), transparent 42%),
+    radial-gradient(ellipse at 86% 72%, rgb(190 61 138 / 7%), transparent 44%),
+    linear-gradient(#F7F7FF, #F7F7FF);
+}
+
+:root.light .journey-item:nth-child(1) .journey-card,
+:root.light .journey-item:nth-child(1) .journey-node {
+  --journey-accent: #087F9F;
+}
+
+:root.light .journey-item:nth-child(2) .journey-card,
+:root.light .journey-item:nth-child(2) .journey-node {
+  --journey-accent: #6254C7;
+}
+
+:root.light .journey-item:nth-child(3) .journey-card,
+:root.light .journey-item:nth-child(3) .journey-node {
+  --journey-accent: #B83D8A;
+}
+
+:root.light .journey-item:nth-child(4) .journey-card,
+:root.light .journey-item:nth-child(4) .journey-node {
+  --journey-accent: #17834E;
+}
+
 @media (max-width: 900px) {
   .learning-journey {
     @apply min-h-0 px-5 py-12;

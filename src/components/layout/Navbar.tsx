@@ -22,6 +22,10 @@ interface NavItem {
   Icon: LucideIcon;
 }
 
+const getInitialTheme = () =>
+  typeof window === "undefined" ||
+  window.localStorage.getItem("ps-prism-theme") !== "light";
+
 const navItems: NavItem[] = [
   { id: "home", labelKey: "navbar.links.home", path: "#home", Icon: Home },
   { id: "about", labelKey: "navbar.links.about", path: "#about", Icon: LayoutGrid },
@@ -33,7 +37,7 @@ const navItems: NavItem[] = [
 export default function Navbar() {
   const { t } = useTranslation();
   const [active, setActive] = useState("home");
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(getInitialTheme);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -41,6 +45,7 @@ export default function Navbar() {
 
     root.classList.toggle("dark", isDark);
     root.classList.toggle("light", !isDark);
+    window.localStorage.setItem("ps-prism-theme", isDark ? "dark" : "light");
   }, [isDark]);
 
   const navLinkClass = (id: string) =>

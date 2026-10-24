@@ -110,6 +110,53 @@
   --review-accent: #a78bfa;
 }
 
+:root.light .student-voices::before {
+  opacity: 0.055;
+}
+
+:root.light .student-review {
+  background: rgb(255 255 255 / 94%);
+  border-color: rgb(109 99 232 / 24%);
+  box-shadow: 0 4px 0 rgb(109 99 232 / 15%), 0 12px 18px rgb(40 37 74 / 10%);
+}
+
+:root.light .student-review-pin {
+  color: #6254C7;
+}
+
+:root.light .student-review-footer {
+  border-color: rgb(41 41 80 / 14%);
+}
+
+:root.light .student-review-avatar {
+  background: color-mix(in srgb, var(--review-accent) 18%, white);
+  color: #28254A;
+}
+
+:root.light .student-review-identity h3 {
+  color: #28254A;
+}
+
+:root.light .student-review-identity p {
+  color: color-mix(in srgb, var(--review-accent) 75%, #28254A);
+}
+
+:root.light .student-review-violet {
+  --review-accent: #6254C7;
+}
+
+:root.light .student-review-pink {
+  --review-accent: #B83D8A;
+}
+
+:root.light .student-review-cyan {
+  --review-accent: #087F9F;
+}
+
+:root.light .student-review-purple {
+  --review-accent: #7650B5;
+}
+
 @media (max-width: 1024px) {
   .student-voices-list {
     @apply grid-cols-2;

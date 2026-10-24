@@ -132,6 +132,57 @@
   outline-offset: 3px;
 }
 
+:root.light .site-footer {
+  background: #EFEEF8;
+  border-color: #DCD9EF;
+  color: #28254A;
+}
+
+:root.light .site-footer-brand h2,
+:root.light .site-footer-links h3,
+:root.light .site-footer-newsletter h3 {
+  color: #28254A;
+}
+
+:root.light .site-footer-description,
+:root.light .site-footer-links a,
+:root.light .site-footer-newsletter > p:first-of-type,
+:root.light .site-footer-coming-soon {
+  color: #5A5770;
+}
+
+:root.light .site-footer-contact {
+  color: #514DAD;
+}
+
+:root.light .site-footer-links a:hover {
+  color: #353A9C;
+}
+
+:root.light .site-footer-newsletter input {
+  background: #FFFFFF;
+  border-color: #D2CFE6;
+  color: #28254A;
+}
+
+:root.light .site-footer-newsletter input::placeholder {
+  color: #77738B;
+}
+
+:root.light .site-footer-newsletter button {
+  background: #514C91;
+  color: #FFFFFF;
+}
+
+:root.light .site-footer-bottom {
+  border-color: #D2CFE6;
+}
+
+:root.light .site-footer-bottom > p,
+:root.light .site-footer-bottom li {
+  color: #68647D;
+}
+
 @media (max-width: 900px) {
   .site-footer-main {
     @apply grid-cols-2 gap-x-8;
